@@ -10,6 +10,8 @@ import { Button } from "@components/Button";
 
 export function Groups() {
   const [groups, setGroups] = useState<string[]>(["Galera da Rocket"]);
+  
+  function handleNewGroup(){}
 
   return (
     <Container>
@@ -24,7 +26,9 @@ export function Groups() {
           <ListEmpty message="Que tal cadastrar a primeira turma?" />
         )}
       />
-      <Button title="Criar nova turma" />
+      <Button 
+      title="Criar nova turma"
+      onPress={handleNewGroup} />
     </Container>
   );
 }
